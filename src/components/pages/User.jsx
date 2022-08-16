@@ -81,7 +81,84 @@ function User(){
                             </a>
                         </div>
                     </div>
-
+                    <div className='w-full rounded-lg shadow-md bg-slate-400 stats'>
+                        {location && (
+                            <div className='stat'>
+                                <div className='stat-title text-md text-black'>
+                                    Location
+                                </div>
+                                <div className='stat-value text-lg text-white'>
+                                    {location}
+                                </div>
+                            </div>
+                        )}
+                        {blog && (
+                            <div className='stat'>
+                                <div className='stat-title text-md text-black'>
+                                    Website
+                                </div>
+                                <div className='stat-value text-lg text-white'>
+                                <a href={`https://${blog}`} target="_blank" rel="noreferrer">{blog}</a>
+                                </div>
+                            </div>
+                        )}
+                        {twitter_username && (
+                            <div className='stat'>
+                                <div className='stat-title text-md text-black'>
+                                    Twitter
+                                </div>
+                                <div className='stat-value text-lg text-white'>
+                                <a href={`https://twitter.com/${twitter_username}`} target="_blank" rel="noreferrer">{twitter_username}</a>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+            <div className='w-full py-5 mb-6 rounded-lg shadow-md bg-slate-400 stats'>
+                <div className='stat'>
+                    <div className='stat-figure text-secondary'>
+                        <FaUsers className='text-3xl md:text-5xl'/>
+                    </div>
+                    <div className='stat-title pr-5 text-black'>
+                        Followers
+                    </div>
+                    <div className='stat-value pr-5 text-3xl md:text-4xl text-white'>
+                        {followers}
+                    </div>
+                </div>
+                <div className='stat'>
+                    <div className='stat-figure text-secondary'>
+                        <FaUserFriends className='text-3xl md:text-5xl'/>
+                    </div>
+                    <div className='stat-title pr-5 text-black'>
+                        Following
+                    </div>
+                    <div className='stat-value pr-5 text-3xl md:text-4xl text-white'>
+                        {following}
+                    </div>
+                </div>
+                <div className='stat'>
+                    <div className='stat-figure text-secondary'>
+                        <FaCodepen className='text-3xl md:text-5xl'/>
+                    </div>
+                    <div className='stat-title pr-5 text-black'>
+                        Public Repositories
+                    </div>
+                    <div className='stat-value pr-5 text-3xl md:text-4xl text-white'>
+                        {public_repos}
+                    </div>
+                </div>
+                <div className='stat'>
+                    <div className='stat-figure text-secondary'>
+                        <FaStore className='text-3xl md:text-5xl'/>
+                    </div>
+                    <div className='stat-title pr-5 text-black'>
+                        Public Gists
+                    </div>
+                    <div className='stat-value pr-5 text-3xl md:text-4xl text-white'>
+                        {public_gists}
+                    </div>
                 </div>
             </div>
         </div>
